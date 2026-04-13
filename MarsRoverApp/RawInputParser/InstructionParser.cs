@@ -8,8 +8,7 @@ namespace MarsRoverApp.RawInputParser
 {
     public class InstructionParser
     {
-        public InstructionParser() { }
-
+        
         public static List<Instruction> ParseInputInstructions(string instruction)
         {
             var validChars = new[] { 'L', 'R', 'M', ' '};

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MarsRoverApp.RoverMovement
 {
-    public class PlateauSize
+    public class PlateauSize (int x, int y)
     {
-        public int x = 5;
-        public int y = 5;
+        public int X { get; set; } = x;
+        public int Y { get; set; } = y;
     }
 
 }

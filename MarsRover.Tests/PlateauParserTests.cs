@@ -70,17 +70,13 @@ namespace MarsRover.Tests
             PlateauSize result = null;
             Assert.That(output, Is.EqualTo(result));
         }
-        [Test] //To come back to - works in Program as expected
+        [Test] 
         public void ParseInputInstructions_ShouldThrowException_WhenGivenStringInputLargerThan5()
         {
             string input = "77";
             string input2 = "5";
-            PlateauSize output = PlateauParser.ParseInputPlateauSize(input,input2);
             
-
-            //Assert.Throws<ArgumentOutOfRangeException>(PlateauParser.ParseInputPlateauSize(input, input2));
-
-            Assert.Throws<ArgumentOutOfRangeException>(delegate { throw new ArgumentOutOfRangeException("Invalid input, please provide number 5 or less"); });
+            Assert.Throws<ArgumentOutOfRangeException>(() => { PlateauParser.ParseInputPlateauSize(input, input2); });
         }
 
         

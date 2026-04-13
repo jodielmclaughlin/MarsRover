@@ -1,4 +1,4 @@
-﻿public enum Instrustion
+﻿public enum Instruction
 {
     L, // Spins the Rover 90 degrees Left without moving from the current coordinate point
     R, // Spins the Rover 90 degrees Right without moving from the current coordinate point

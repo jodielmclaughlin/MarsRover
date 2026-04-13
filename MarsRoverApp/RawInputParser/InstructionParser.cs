@@ -10,10 +10,24 @@ namespace MarsRoverApp.RawInputParser
     {
         public InstructionParser() { }
 
-        //public static int ParseInputInstructions(string instructions)
-        //{
-        //    int parsedInstructions = Int32.Parse(instructions);
-        //    return parsedInstructions;
-        //}
+        public static List<Instruction> ParseInputInstructions(string instruction)
+        {
+            var validChars = new[] { 'L', 'R', 'M', ' '};
+            if (!instruction.ToUpper().All(c => validChars.Contains(c)))
+            {
+                throw new ArgumentException("Invalid input, please provide correct Instruction");
+            }
+            var inputInstructionList = instruction
+                                       .ToUpper()
+                                       .Where(c => !char.IsWhiteSpace(c))
+                                       .Select(c => Enum.Parse<Instruction>(c.ToString()))
+                                       .ToList();
+
+            foreach (var instructions in inputInstructionList)
+            {
+                Console.WriteLine(instructions);
+            }
+            return inputInstructionList;
+        }
     }
 }

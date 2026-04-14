@@ -1,6 +1,6 @@
 using MarsRoverApp.RawInputParser;
 using MarsRoverApp.RoverMovement;
-namespace MarsRover.Tests
+namespace MarsRover.Tests.ParserTests
 {
     public class InstructionParserTests
     {

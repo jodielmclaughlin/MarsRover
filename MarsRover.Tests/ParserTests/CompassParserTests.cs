@@ -1,7 +1,7 @@
 ﻿using MarsRoverApp.RawInputParser;
 using MarsRoverApp.RoverMovement;
 
-namespace MarsRover.Tests;
+namespace MarsRover.Tests.ParserTests;
 
 public class CompassParserTests
 {
@@ -54,4 +54,5 @@ public class CompassParserTests
 
         Assert.Throws<ArgumentException>(() => { CompassParser.ParseInputDirection(input); });
     }
+
 }

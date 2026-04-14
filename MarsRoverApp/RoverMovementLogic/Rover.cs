@@ -61,5 +61,30 @@ namespace MarsRoverApp.RoverMovementLogic
             }
             return Compass.N;
         }
+
+        public Position MoveForward(Rover rover, Instruction instruction) //Need to add Plateau Boundary Method to this.
+        {
+            if (rover == null)
+            {
+                throw new NullReferenceException("Rover needs to be input");
+            }
+            switch (rover.Position.Facing)
+            {
+                case Compass.N:
+                    rover.Position.X++;
+                    break;
+                case Compass.E:
+                    rover.Position.Y++;
+                    break;
+                case Compass.S:
+                    rover.Position.X--;
+                    break;
+                case Compass.W:
+                    rover.Position.Y--;
+                    break;
+            }
+
+            return rover.Position;
+        }
     }
 }

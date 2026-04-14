@@ -20,7 +20,7 @@ namespace MarsRoverApp.RoverMovementLogic
 
         public Compass Rotate(Rover rover, Instruction instruction) //TODO: Refactor when time
         {
-            if(rover == null)
+            if (rover == null)
             {
                 throw new NullReferenceException("Rover needs to be input");
             }

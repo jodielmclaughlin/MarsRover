@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MarsRoverApp.RoverMovement
 {
-    public class Position
+    public class Position(int x, int y, Compass facing)
     {
-        public int x;
-        public int y;
-        public Compass facing;
+        public int X { get; set; } = x;
+        public int Y { get; set; } = y;
+        public Compass Facing { get; set; } = facing;
 
     }
 

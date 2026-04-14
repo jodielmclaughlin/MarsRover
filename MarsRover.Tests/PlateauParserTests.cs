@@ -12,20 +12,20 @@ namespace MarsRover.Tests
         }
 
         [Test]
-        public void ParseInputInstructions_ShouldReturnNewPlateauSize_WhenGivenStringInput()
+        public void ParseInputPlateauSize_ShouldReturnNewPlateauSize_WhenGivenStringInput()
         {
             string input = "5";
             string input2 = "5";
             PlateauSize output = PlateauParser.ParseInputPlateauSize(input, input2);
             PlateauSize result = new PlateauSize(5,5);
-            var resultCheck = result.X;
-            var resultCheck2 = result.Y;
+            var resultCheck = output.X;
+            var resultCheck2 = output.Y;
 
             Assert.That(resultCheck, Is.EqualTo(5));
             Assert.That(resultCheck2, Is.EqualTo(5));
         }
         [Test]
-        public void ParseInputInstructions_ShouldReturnNull_WhenGivenEmptyStringInput()
+        public void ParseInputPlateauSize_ShouldReturnNull_WhenGivenEmptyStringInput()
         {
             string input = "";
             string input2 = "5";
@@ -34,7 +34,7 @@ namespace MarsRover.Tests
             Assert.That(output, Is.EqualTo(result));
         }
         [Test]
-        public void ParseInputInstructions_ShouldReturn0_WhenGivenNullInput()
+        public void ParseInputPlateauSize_ShouldReturn0_WhenGivenNullInput()
         {
             string input = null;
             string input2 = "5";
@@ -43,7 +43,7 @@ namespace MarsRover.Tests
             Assert.That(output, Is.EqualTo(result));
         }
         [Test]
-        public void ParseInputInstructions_ShouldReturn0_WhenGivenCharStringInput()
+        public void ParseInputPlateauSize_ShouldReturn0_WhenGivenCharStringInput()
         {
             string input = "c";
             string input2 = "5";
@@ -53,7 +53,7 @@ namespace MarsRover.Tests
 
         }
         [Test]
-        public void ParseInputInstructions_ShouldReturn0_WhenGivenSentenceStringInput()
+        public void ParseInputPlateauSize_ShouldReturn0_WhenGivenSentenceStringInput()
         {
             string input = "hello";
             string input2 = "world!";
@@ -62,7 +62,7 @@ namespace MarsRover.Tests
             Assert.That(output, Is.EqualTo(result));
         }
         [Test]
-        public void ParseInputInstructions_ShouldReturn0_WhenGivenMixedCharAndDigitStringInput()
+        public void ParseInputPlateauSize_ShouldReturn0_WhenGivenMixedCharAndDigitStringInput()
         {
             string input = "h3ll0";
             string input2 = "w0rld!";
@@ -71,7 +71,7 @@ namespace MarsRover.Tests
             Assert.That(output, Is.EqualTo(result));
         }
         [Test] 
-        public void ParseInputInstructions_ShouldThrowException_WhenGivenStringInputLargerThan5()
+        public void ParseInputPlateauSize_ShouldThrowException_WhenGivenStringInputLargerThan5()
         {
             string input = "77";
             string input2 = "5";

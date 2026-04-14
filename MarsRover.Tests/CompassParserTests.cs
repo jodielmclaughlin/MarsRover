@@ -40,7 +40,7 @@ public class CompassParserTests
     [Test]
     public void ParseInputInstructions_ShouldReturnN_WhenStringInputIsLowerCase()
     {
-        string input = "N";
+        string input = "n";
 
         var output = CompassParser.ParseInputDirection(input);
         var result = Compass.N;
@@ -53,16 +53,5 @@ public class CompassParserTests
         string input = "1";
 
         Assert.Throws<ArgumentException>(() => { CompassParser.ParseInputDirection(input); });
-    }
-    [Test]
-    public void ParseInputInstructions_ShouldReturnOutput_WhenGivenLargerStringInput()
-    {
-        string input = "LMRLLRRMML";
-        List<Instruction> output = InstructionParser.ParseInputInstructions(input);
-        List<Instruction> result = new List<Instruction> { Instruction.L, Instruction.M,
-                                        Instruction.R, Instruction.L, Instruction.L, Instruction.R,
-                                        Instruction.R, Instruction.M, Instruction.M, Instruction.L };
-
-        Assert.That(result, Is.EqualTo(output));
     }
 }

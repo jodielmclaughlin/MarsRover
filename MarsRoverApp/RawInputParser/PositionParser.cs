@@ -38,8 +38,10 @@ namespace MarsRoverApp.RawInputParser
             int x = Int32.Parse(xChar.ToString());
             int y = Int32.Parse(yChar.ToString());
             Compass facing = Enum.Parse<Compass>(dirChar.ToString());
-
-            return new Position(x, y, facing);
+            Position newPosition = new Position(x, y, facing);
+            Console.WriteLine($"The position of the Rover is: {newPosition.X}{newPosition.Y}{newPosition.Facing} ");
+            
+            return newPosition;
         }
     }
 }

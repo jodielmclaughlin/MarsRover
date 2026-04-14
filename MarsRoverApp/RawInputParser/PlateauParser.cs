@@ -26,7 +26,7 @@ namespace MarsRoverApp.RawInputParser
             if (x <= 5 && y <= 5)
             {
                 PlateauSize parsedPlateausize = new PlateauSize(x, y);
-
+                Console.WriteLine($"Plateau size is: {parsedPlateausize.X}, {parsedPlateausize.Y}");
                 return parsedPlateausize;
             }
             else

@@ -24,7 +24,7 @@ namespace MarsRoverApp.RawInputParser
 
             foreach (var instructions in inputInstructionList)
             {
-                Console.WriteLine(instructions);
+                Console.WriteLine("Instruction = " + instructions);
             }
             return inputInstructionList;
         }

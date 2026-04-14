@@ -8,7 +8,9 @@ namespace MarsRoverApp
         {
             Console.WriteLine("Hello, World!");
             PlateauParser.ParseInputPlateauSize("5", "5");
-            InstructionParser.ParseInputInstructions("L L L");
+            PositionParser.ParsePositionInput("12N");
+            InstructionParser.ParseInputInstructions("LMLMLMLMM");
+            
             
         }
     }
